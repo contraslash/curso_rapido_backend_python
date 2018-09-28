@@ -56,6 +56,9 @@
         </ul></nav><!-- /#menu -->
         {% block content %}
         {% endblock %}
+        {% for pg in pages %}
+                    <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+                {% endfor %}
         <footer id="contentinfo" class="body">
                 <address id="about" class="vcard body">
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>,

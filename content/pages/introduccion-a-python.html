@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>
+        Introducción a python
+    </title>
+    <meta name="date" content="2018-09-24">
+</head>
+<body>
+    <div class="container"><p>Para instalar python recomendamos <a href="https://wiki.python.org/moin/BeginnersGuide/Download">los tutoriales</a> de la página oficial.</p>
+
+<p>A manera de introducción recorreremos las principales sentencias que se usan en python.</p>
+
+
+
+<h3 id="variables">Variables</h3>
+
+<p>Python es un lenguaje no tipado, por esta razón, definir variables es tan fácil como escribir el nombre y asignar su valor</p>
+
+<pre class="prettyprint"><code class=" hljs ini"><span class="hljs-setting">variable_numerica = <span class="hljs-value"><span class="hljs-number">5</span></span></span>
+<span class="hljs-setting">variable_texto = <span class="hljs-value"><span class="hljs-string">"Un texto"</span> </span></span>
+<span class="hljs-setting">variable_booleana = <span class="hljs-value"><span class="hljs-keyword">True</span></span></span></code></pre>
+
+<p>A este punto es importante informar algunos puntos importantes en la manera pythónica de hacer las cosas.</p>
+
+<p>Si anteriormente has programado en C, C++, C# o Java, estás acostumbrado a escribirElTextoUsandoLaNotaciónCamelCase, aquí_en_python_preferimos_usar_las_barras_bajas_o_underscores, porque es mas fácil de leer, y lo mas importante para python es que sea fácil de leer.</p>
+
+<h3 id="condicionales">Condicionales</h3>
+
+<p>Como primer segmento de control tenemos los condicionales.</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs php"><span class="hljs-keyword">if</span> <span class="hljs-keyword">True</span>:
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"Verdadero"</span>
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-keyword">print</span> <span class="hljs-string">"Falso"</span></code></pre>
+
+<p>Desde este momento es apropiado aclarar que la filosofía de python va en contra de los puntos y comas, y las llaves, y todo lo que pueda complicar la visibilidad, aunque los punto y comas pueden usarse para separar sentencias en una misma línea, en python no nos gusta usarlos.</p>
+
+<p>Los bloques de código se identifican por una línea de identación. Falso a lo que muchos piensan, en python es posible identar sin necesidad de usar tabulador. Usualmente las personas tienden a identar usando su tecla <code>tab</code>. Usualmente python convierte estos <code>tab</code> en una secuencia de 8 espacios.</p>
+
+<blockquote>
+  <p><strong>Para usuarios de C y derivados:</strong> En Python la sentencia switch no existe, pero podemos usar sentencias if de la forma</p>
+
+  <pre class="prettyprint"><code class=" hljs bash"><span class="hljs-keyword">if</span> sentencia:
+    bloque_de_codigo
+<span class="hljs-keyword">elif</span> sentencia:
+    bloque_de_codigo
+<span class="hljs-keyword">elif</span> sentencia:
+    ....
+<span class="hljs-keyword">else</span>:
+    bloque_de_codigo</code></pre>
+</blockquote>
+
+
+
+<h3 id="secuencias">Secuencias</h3>
+
+<p>Una secuencia es un conjunto de datos que cumple la propiedad de orden.</p>
+
+<p>En esta categoría se encuentras las cadenas de caracteres, las tuplas y las listas.</p>
+
+
+
+<h4 id="cadenas-de-caracteres">Cadenas de caracteres</h4>
+
+<p>Se inician con comillas o doble comillas. Python no diferencia unos de otros</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs ini"><span class="hljs-setting">cadena = <span class="hljs-value"><span class="hljs-string">"soy una cadea"</span></span></span></code></pre>
+
+<h4 id="tuplas">Tuplas</h4>
+
+<p>Se inician con parentesis, aunque no son requeridos,  y los valores se separan por comas. Una vez definido un valor para una tupla, no se puede cambiar. <br>
+tupla = (1,2,3,4)</p>
+
+<h4 id="listas">Listas</h4>
+
+<p>Se inician con corchetes, los valores son separados por comas. Su valor es modificable</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs fix"><span class="hljs-attribute">lista </span>=<span class="hljs-string"> [1,2,3,4]</span></code></pre>
+
+<p>El acceso a los elementos de una secuencia se realiza por los accesadores []</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs fix"><span class="hljs-attribute">elemento </span>=<span class="hljs-string"> secuencia[0]</span></code></pre>
+
+<h3 id="ciclos">Ciclos</h3>
+
+<p>Python presenta dos tipos de ciclos</p>
+
+
+
+<h4 id="for">For</h4>
+
+<p>El ciclo for se usa para recorrer una estructura de tipo secuencia.</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs lua">lista = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]
+<span class="hljs-keyword">for</span> elemento <span class="hljs-keyword">in</span> lista:
+    <span class="hljs-built_in">print</span> elemento</code></pre>
+
+
+
+<h4 id="while">While</h4>
+
+<p>El ciclo while es usado para repetir bloques de código mientras se cumpla una condición</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs livecodeserver"><span class="hljs-keyword">while</span> <span class="hljs-operator">a</span>&lt;<span class="hljs-number">5</span>:
+    print <span class="hljs-operator">a</span>
+    <span class="hljs-operator">a</span> += <span class="hljs-number">1</span></code></pre>
+
+<blockquote>
+  <p><strong>Para usuarios de C y derivados</strong> Para implementar un ciclo for como lo presentan conocen, se puede usar la función <em><a href="https://docs.python.org/2/library/functions.html#range">range</a></em>,  que genera una lista de números que se puede recorrer por el ciclo.</p>
+</blockquote>
+
+
+
+<h3 id="diccionarios">Diccionarios</h3>
+
+<p>También llamados arreglos asociativos. Contienen valores indexados por llaves. <br>
+Se inician con llaves</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs bash">diccionario = {
+    <span class="hljs-string">'llave_1'</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">'llave_2'</span>: <span class="hljs-number">2</span>
+}</code></pre>
+
+<p>El acceso a los valores de un diccionario también se realiza por el accesador [], solo que el índice en esta ocación es texto <br>
+elemento = diccionario[‘llave_1’]</p>
+
+
+
+<h3 id="funciones">Funciones</h3>
+
+<p>Son bloques ejecutables de código, se usa la palabra reservada def</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">suma</span><span class="hljs-params">(sumando_1, sumando_2)</span>:</span>
+    <span class="hljs-keyword">return</span> sumando_1 + sumando_2</code></pre>
+
+<p>Las funciones pueden retornar múltiples valores</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">division</span><span class="hljs-params">(divisor, dividendo)</span>:</span>
+    cociente = divisor/dividendo
+    residuo = divisor - cociente * dividendo
+    <span class="hljs-keyword">return</span> q,r
+
+cociente, residuo = division(<span class="hljs-number">24</span>,<span class="hljs-number">7</span>)</code></pre>
+
+
+
+<h3 id="clases">Clases</h3>
+
+<p>Son nuevos tipos de objetos, definidos por la palabra reservada class.</p>
+
+<p>Los métodos son definidos usando la palabra reservada def. Cada método recibirá como primer parámetro la instancia del objeto actual, manteniendo un concepto bastante pragmático de las primeras aproximaciones a la programación orientada a objetos.</p>
+
+<p>Posteriormente se estudiarán un poco mejor los conceptos relacionados con las clases.</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pila</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.pila = []
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">colocar</span><span class="hljs-params">(self)</span>:</span>
+        self.pila.append(objeto)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">quitar</span><span class="hljs-params">(self)</span>:</span>
+        self.pila.pop(objeto)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">longitud</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> len(self.pila)</code></pre>
+
+
+
+<h3 id="excepciones">Excepciones</h3>
+
+<p>Si un error ocurre, las excepciones se levantan indicando el tipo del error y el lugar donde ocurrió.</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs lua">try:
+    archivo = open(<span class="hljs-string">'archivo.txt'</span>,<span class="hljs-string">'r'</span>)
+except IOError, <span class="hljs-built_in">error</span>:
+    <span class="hljs-built_in">print</span> <span class="hljs-built_in">error</span></code></pre>
+
+
+<h3 id="módulos">Módulos</h3>
+
+<p>En tanto los programas crezcan en tamaño,  es muy posible separar los componentes en distintos archivos, luego al cargarlos se ejecutarán como código python</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs python"><span class="hljs-keyword">from</span> modulo <span class="hljs-keyword">import</span> componente</code></pre>
+
+<blockquote>
+  <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote></div>
+</body>
+</html>

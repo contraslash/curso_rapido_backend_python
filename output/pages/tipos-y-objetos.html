@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/theme/css/custom_page.css" />
+
+
+
+
+    <title>
+
+        Tipos y Objetos
+        </title>
+</head>
+<body class="white">
+
+    <div class="container">
+
+<section id="content" class="body">
+    <h1 class="entry-title">
+        Tipos y Objetos
+    </h1>
+    
+    
+
+<div class="container"><p>A pesar de ser un lenguaje de programación multiparadigma, Python está construido al rededor del concepto de objetos. Los tipos fundamentales como números, cadenas, listas y diccionarios son objetos.</p>
+
+
+
+<h3 id="terminología">Terminología</h3>
+
+<p>Cada pieza de información almacenada en un programa de python tiene un identificadr, un tipo y un valor.</p>
+
+<p>El <em>type</em> de un objeto (que también es un tipo especial de objeto), describe la representación interna de un objeto, que incluye los atributos y métodos del mismo.</p>
+
+
+
+<h3 id="identidad-y-tipo">Identidad y tipo</h3>
+
+<p>Los objetos ocupan un lugar en memoria, y es posible obtener su localización como un entero a través de la función <em>id</em></p>
+
+<p>Para verificar el tipo de un objeto se usa la función <em>type</em>, y es posible determinarlo con el operador is. Un ejemplo:</p>
+
+<pre class="prettyprint"><code class=" hljs go"><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">type</span>(s) is types.ListType:
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"Es una lista"</span>
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"No es una lista"</span></code></pre>
+
+<p>Para encontrar tipos de clases definidas por nosotros, es mejor usar el método <em>isinstance</em>, descrito en un siguiente capítulo</p>
+
+
+
+<h3 id="conteo-de-referencia-y-recolector-de-basura">Conteo de referencia y recolector de basura</h3>
+
+<p>Python es bastante pragmático en el uso de las referencias y la recolección de basura. Cada variable reserva un espacio en memoria e inicia un nuevo contador de referencia. Es posible liberar espacio en memoria con la función <em>del</em>, que quita la referencia del espacio en memoria y hace que el contador reduzca su valor en 1.</p>
+
+<p>Cuando el contador de referencias de un espacio en memoria llega a 0, el recolector de basura libera el espacio para que pueda ser usado por otras variables.</p>
+
+
+
+<h3 id="referencias-y-copias">Referencias y copias</h3>
+
+<p>Cuando se realiza una operación de asignación <code>a=b</code>, una refencia a b es creada. Para el caso de objetos inmutables como numeros y cadenas, se crea una copia efectiva de valor.</p>
+
+<p>En el caso de otros tipos de objetos mutables, la copia se realiza por referencia, es decir,  ambas variables estarán apuntando al mismo espacio en memoria, de tal manera que al modificar uno,  se modificarán todos, porque se modificó directamente la el valor en la memoria.</p>
+
+<p>Cuando se desee realizar una copia completa de un objeto mutable, se recomienda usar el método <code>copy.deepcopy</code></p>
+
+
+
+<h3 id="tipos-incorporados">Tipos incorporados</h3>
+
+<p>La lista de tipos incorporados en Python son los siguientes</p>
+
+<table>
+<thead>
+<tr>
+  <th>Categoría</th>
+  <th>Nombre</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>None</td>
+  <td>NoneType</td>
+  <td>Representación del objeto nulo</td>
+</tr>
+<tr>
+  <td>Números</td>
+  <td>IntType</td>
+  <td>Representa números enteros</td>
+</tr>
+<tr>
+  <td></td>
+  <td>LongType</td>
+  <td>Enteros de cualquier precisión</td>
+</tr>
+<tr>
+  <td></td>
+  <td>FloatType</td>
+  <td>Números de punto flotante</td>
+</tr>
+<tr>
+  <td></td>
+  <td>ComplexType</td>
+  <td>Números complejos</td>
+</tr>
+<tr>
+  <td>Secuencias</td>
+  <td>StringType</td>
+  <td>Cadenas de caracteres</td>
+</tr>
+<tr>
+  <td></td>
+  <td>UnicodeType</td>
+  <td>Cadenas de caracteres unicode (16-bits)</td>
+</tr>
+<tr>
+  <td></td>
+  <td>ListType</td>
+  <td>Listas</td>
+</tr>
+<tr>
+  <td></td>
+  <td>TupleType</td>
+  <td>Tuplas</td>
+</tr>
+<tr>
+  <td></td>
+  <td>XRangeType</td>
+  <td>Listas perezosas</td>
+</tr>
+<tr>
+  <td></td>
+  <td>BufferType</td>
+  <td>Búfers</td>
+</tr>
+<tr>
+  <td>Mapeo</td>
+  <td>DictType</td>
+  <td>Diccionarios</td>
+</tr>
+<tr>
+  <td>Ejecutables</td>
+  <td>BuiltInFunctionType</td>
+  <td>Funciones incorporadas del lenguaje</td>
+</tr>
+<tr>
+  <td></td>
+  <td>BuiltInMethodType</td>
+  <td>Métods de objetos incorporados del lenguaje</td>
+</tr>
+<tr>
+  <td></td>
+  <td>ClassType</td>
+  <td>Clases</td>
+</tr>
+<tr>
+  <td></td>
+  <td>FunctionType</td>
+  <td>Funciones definidas por el usuario</td>
+</tr>
+<tr>
+  <td></td>
+  <td>InstanceType</td>
+  <td>Objeto</td>
+</tr>
+<tr>
+  <td></td>
+  <td>MethodType</td>
+  <td>Método ligadoa un objeto</td>
+</tr>
+<tr>
+  <td></td>
+  <td>UnboundMethodType</td>
+  <td>Método no ligadoa  un objeto</td>
+</tr>
+<tr>
+  <td>Módulos</td>
+  <td>ModuleType</td>
+  <td>Módulo</td>
+</tr>
+<tr>
+  <td>Clases</td>
+  <td>ClassType</td>
+  <td>Definición de clase</td>
+</tr>
+<tr>
+  <td>Objeto</td>
+  <td>InstanceType</td>
+  <td>Definición de objeto</td>
+</tr>
+<tr>
+  <td>Archivos</td>
+  <td>FileType</td>
+  <td>Archivo</td>
+</tr>
+<tr>
+  <td>Internos</td>
+  <td>CodeType</td>
+  <td>Código compilado de python</td>
+</tr>
+<tr>
+  <td></td>
+  <td>FrameType</td>
+  <td>Ventana de ejecución</td>
+</tr>
+<tr>
+  <td></td>
+  <td>TracebackType</td>
+  <td>Pila de excepciones</td>
+</tr>
+<tr>
+  <td></td>
+  <td>SliceType</td>
+  <td>Segmentos de secuencias</td>
+</tr>
+<tr>
+  <td></td>
+  <td>EllipsisType</td>
+  <td>Segmento de secuencias extendido</td>
+</tr>
+</tbody></table>
+
+
+<p><em>ClassType</em> y <em>InstanceType</em> están mencionados en la categoría de ejecutables, porque en circunstancias especiales pueden ser ejecutadas.</p>
+
+<p>En los siguientes capítulos, se mostrará en detalle cada categoría</p>
+
+<blockquote>
+  <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote></div>
+
+</section>
+    </div>
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+</body>
+</html>

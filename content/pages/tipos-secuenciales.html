@@ -1,0 +1,270 @@
+<html>
+<head>
+    <title>
+        Tipo Secuenciales
+    </title>
+    <meta name="date" content="2018-09-24">
+</head>
+<body>
+<div class="container"><p>Las <em>secuencias</em> representan conjuntos de objetos indexados con enteros no negativos e incluyen las siguientes clases principales <br>
+- Cadenas de caracteres <br>
+- Listas <br>
+- Tuplas <br>
+- Objetos <em>xrange</em> <br>
+- Buffers</p>
+
+<p>Las cadenas y los buffers son secuencias de caracteres, los objetos <em>xrange</em> son secuencias de números y las listas y tuplas son secuencias de objetos python.</p>
+
+<p>Para acceder a un elemento específico de una secuencia se utiliza el operador [i], donde i es un entero en el rango [0, longitud_de_la_secuencia - 1].</p>
+
+<p>Para acceder a una subsecuencia se utiliza el operador [i:j], donde i y j son enteros en el rango [0, longitud_de_la_secuencia - 1], e i &lt; j.</p>
+
+<p>Algunos métodos que están disponibles para todas las secuentcias son los siguientes:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Método</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>s[i]</td>
+  <td>Retorna el i-ésimo elemento de la secuencia</td>
+</tr>
+<tr>
+  <td>s[i:j]</td>
+  <td>Retorna el la subsecuencia [i,j] de la secuencia</td>
+</tr>
+<tr>
+  <td>len(s)</td>
+  <td>Retorna la longitud de la secuencia</td>
+</tr>
+<tr>
+  <td>min(s)</td>
+  <td>Retorna el valor mínimo de la secuencia</td>
+</tr>
+<tr>
+  <td>max(s)</td>
+  <td>Retorna el valor máximo de la secuencia</td>
+</tr>
+<tr>
+  <td>s[i] = v</td>
+  <td>Asigna el valor v en la posición i-ésima de la secuencia</td>
+</tr>
+<tr>
+  <td>s[i:j] = t</td>
+  <td>Asigna la subsecuencia t entre los índices [i,j]</td>
+</tr>
+<tr>
+  <td>del s[i]</td>
+  <td>Elimina el elemento i-ésimo de la lista</td>
+</tr>
+<tr>
+  <td>del s[i:j]</td>
+  <td>Elimina la subsecuencia entre los índices [i:j]</td>
+</tr>
+</tbody></table>
+
+
+<h3 id="listas">Listas</h3>
+
+<p>Adicionalmente las listas específicamente tiene algunas funciones incorporadas.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Método</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>list(s)</td>
+  <td>Convierte la secuencia s en una lista</td>
+</tr>
+<tr>
+  <td>s.append(x)</td>
+  <td>Añade el elemento x al final de la lista</td>
+</tr>
+<tr>
+  <td>s.extends(t)</td>
+  <td>Añande la lista t al final de s</td>
+</tr>
+<tr>
+  <td>s.count(x)</td>
+  <td>Cuenta las ocurrencias de x en s</td>
+</tr>
+<tr>
+  <td>s.index(x)</td>
+  <td>Retorna el índice de la primera ocurrencia de x en s</td>
+</tr>
+<tr>
+  <td>s.insert(i,x)</td>
+  <td>Inserta el valor x en la posición i</td>
+</tr>
+<tr>
+  <td>s.pop(i)</td>
+  <td>Retorna el elemento i-ésimo de la lista y lo elimina d ela misma. Si <em>i</em> no está definido, se retorna el último elemento de la lista y se elimina</td>
+</tr>
+<tr>
+  <td>s.remove(x)</td>
+  <td>Elimina la primera ocurrencia del elemento x en s</td>
+</tr>
+<tr>
+  <td>s.reverse()</td>
+  <td>Cambia el orden de la lista</td>
+</tr>
+<tr>
+  <td>s.sort()</td>
+  <td>Ordena los elementos de la lista. Esta función acepta opcionalmente una función de comparación.</td>
+</tr>
+</tbody></table>
+
+
+
+
+<h3 id="cadenas-de-caracteres">Cadenas de caracteres.</h3>
+
+<p>Python posee dos maneras de almacenar las cadenas. La manera estádar es con caracteres de 8 bits y una manera alternativa es con caracteres codificados en <em><a href="https://es.wikipedia.org/wiki/Unicode">Unicode</a></em> de 16 bits (En la versión 3 de Python,  las cadenas por defecto se almacenan directamente como <em>Unicode</em>).</p>
+
+<p>Los métodos útiles para las cadenas son los siguientes:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Método</th>
+  <th>Descripción</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td>s.capitalize()</td>
+  <td>Retorna una nueva cadena con el primer caracter en mayúscula</td>
+</tr>
+<tr>
+  <td>s.center(w)</td>
+  <td>Retorna una nueva cadena de longitud w con s en el centro</td>
+</tr>
+<tr>
+  <td>s.count(sub)</td>
+  <td>Retorna el conteo de la subcadena sub en s. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida</td>
+</tr>
+<tr>
+  <td>s.encode(encoding)</td>
+  <td>Retorna la cadena codificada con el formato especificado. Esta función acepta un parámetro extra <em>errors</em>, para definir que hacer con los errores. Los valores permitidos son ‘strict’, ‘ignore’ y ‘replace’</td>
+</tr>
+<tr>
+  <td>s.endswith(sufijo)</td>
+  <td>Verifica si la cadena termina con la subcadena sufijo. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.expandtabs(t)</td>
+  <td>Retorna una nueva cadena con las ocurrencias del caracter especial <em>\t</em> reemplazado por t espacios.</td>
+</tr>
+<tr>
+  <td>s.find(sub)</td>
+  <td>Busca la primera ocurrencia de la subcadena sub en s. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.rfind(sub)</td>
+  <td>Busca la primera ocurrencia de la subcadena sub en s de derecha a izquierda. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.index(sub)</td>
+  <td>Busca la primera ocurrencia de la subcadena sub en s y si no lo encuentra levanta una excepción. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.rindex(sub)</td>
+  <td>Busca la primera ocurrencia de la subcadena sub en s de derecha a izquierda y si no lo encuentra levanta una excepción. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.isalnum()</td>
+  <td>Verifica si todos los caracteres de la cadena son alfanuméricos</td>
+</tr>
+<tr>
+  <td>s.isalpha()</td>
+  <td>Verifica si todos los caracteres de la cadena son alfabéticos</td>
+</tr>
+<tr>
+  <td>s.isdigit()</td>
+  <td>Verifica si todos los caracteres de la cadena son dígitos</td>
+</tr>
+<tr>
+  <td>s.islower()</td>
+  <td>Verifica si todos los caracteres alfabéticos están en minúscula</td>
+</tr>
+<tr>
+  <td>s.isspace()</td>
+  <td>Verifica si la cadena solo contiene caracteres de espacio</td>
+</tr>
+<tr>
+  <td>s.istitle()</td>
+  <td>Verifica si cada palabra de la cadena tiene su primera letra mayúscula</td>
+</tr>
+<tr>
+  <td>s.isupper()</td>
+  <td>Verifica si cada caracter de la cadena está en mayúscula</td>
+</tr>
+<tr>
+  <td>s.join(t)</td>
+  <td>Toma cada elemento de la secuencia t y lo transforma en una cadena con s como delimitador</td>
+</tr>
+<tr>
+  <td>s.ljust(w)</td>
+  <td>Realiza una alineación a la izquierda de la cadena s en una cadena de longitud w</td>
+</tr>
+<tr>
+  <td>s.rjust(w)</td>
+  <td>Realiza una alineación a la derecha de la cadena s en una cadena de longitud w</td>
+</tr>
+<tr>
+  <td>s.lower()</td>
+  <td>Retorna una nueva cadena con todas las letras en minúscila</td>
+</tr>
+<tr>
+  <td>s.replace(a,n)</td>
+  <td>Retorna una nueva cadena con la subcadena a reemplazada por la subcadena n</td>
+</tr>
+<tr>
+  <td>s.split(d)</td>
+  <td>Retorna una lista con la separación de la cadena con delimitador d. Si d no es definido, se utiliza el caracter de espacio en blanco. Esta función recibe adicionalmente un parámetro adicional <em>maxsplit</em> que determina la cantidad máxima de particiones que se realizarán a la cadena</td>
+</tr>
+<tr>
+  <td>s.splitlines()</td>
+  <td>Parte la cadena en una lista con delimitador salto de línea. Esta función recibe un parámetro adicional <em>keepends</em> que determina si el caracter de salto de lína es preservado al final de cada elemento de la lista.</td>
+</tr>
+<tr>
+  <td>s.startswith(prefijo)</td>
+  <td>Verifica si la cadena inicia con la subcadena prefijo. Esta función recibe parametros adicionales <em>start</em> y <em>end</em> para realizar el método en la subcadena definida.</td>
+</tr>
+<tr>
+  <td>s.strip()</td>
+  <td>Elimina los espacios en blanco a la izquierda y derecha de la cadena</td>
+</tr>
+<tr>
+  <td>s.lstrip()</td>
+  <td>Elimina los espacios en blanco a la izquierda de la cadena</td>
+</tr>
+<tr>
+  <td>s.rstrip()</td>
+  <td>Elimina los espacios en blanco a la derecha de la cadena</td>
+</tr>
+<tr>
+  <td>s.swapcase()</td>
+  <td>Retorna una nueva cadena cambiando las mayúsculas por minúscilas y las minúsculas por mayúscilas</td>
+</tr>
+<tr>
+  <td>s.title()</td>
+  <td>Retorna una nueva cadena con la primera letra de cada palabra en mayúscila</td>
+</tr>
+<tr>
+  <td>s.upper()</td>
+  <td>Retorna una nueva cadena con todas las letras en mayúscula</td>
+</tr>
+</tbody></table>
+
+
+<blockquote>
+  <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote></div>
+</body>
+</html>
