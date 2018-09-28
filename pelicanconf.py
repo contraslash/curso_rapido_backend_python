@@ -50,4 +50,6 @@ READERS = {
 }
 
 STATIC_PATHS = ["img"]
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
 # THEME_STATIC_PATHS = ["themes/remark/static"]
