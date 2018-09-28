@@ -27,7 +27,7 @@ class: center
 - [Encuestas de Stack Overflow](https://insights.stackoverflow.com)
 - [Python se está conviertendo en el lenguaje de programación mas popular](https://www.economist.com/graphic-detail/2018/07/26/python-is-becoming-the-worlds-most-popular-coding-language)
 - [Por qué aprender Python](http://www.bestprogramminglanguagefor.me/why-learn-python)
-- [Ventajas y desventajas de Python] (https://medium.com/@mindfiresolutions.usa/advantages-and-disadvantages-of-python-programming-language-fd0b394f2121)
+- [Ventajas y desventajas de Python](https://medium.com/@mindfiresolutions.usa/advantages-and-disadvantages-of-python-programming-language-fd0b394f2121)
 ---
 # Ventajas
 - Tipado Dinámico
@@ -202,4 +202,6 @@ Pero sin contar también
 - [Bokeh](https://bokeh.pydata.org/en/latest/)
 - [Spacy](https://spacy.io/)
 - [Gensim](https://radimrehurek.com/gensim/)
-- 
+---
+class: center, middle
+# Gracias

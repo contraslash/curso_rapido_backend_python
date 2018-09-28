@@ -17,6 +17,15 @@ conda install -c conda-forge markdown
 conda install -c conda-forge livereload
 ```
 
+Alternativa con virtualenv
+```bash
+mkvirtualenv  -p python3 curso_rapido_python
+
+pip install pelican
+pip install markdown
+pip install livereload
+```
+
 Para ejecutar local
 
 ```bash
