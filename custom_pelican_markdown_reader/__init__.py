@@ -1,3 +1,0 @@
-import pelican
-
-pelican.Pelican()
