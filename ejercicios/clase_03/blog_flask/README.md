@@ -1,11 +1,21 @@
 # Blog flask
 
-To run the application
+
+La aplicación debe ejecutarse desde la carpeta padre del proyecto
+Para ejecutar la aplicación
 ```bash
-FLASK_RUN_PORT=8000 FLASK_DEBUG=1 flask run
+FLASK_RUN_PORT=8000 FLASK_DEBUG=1 FLASK_APP=blog_flask flask run
 ```
 
-To create posts
+Para usuarios windows
+```bash
+set FLASK_RUN_PORT=8000 
+set FLASK_DEBUG=1 
+set FLASK_APP=blog_flask
+flask run
+```
+
+Para crear posts
 
 ```python
 from blog_flask import (
@@ -24,7 +34,7 @@ db.session.add(p1)
 db.session.commit()
 ```
 
-To get all posts
+Para tener todos los post
 ```python
 from blog_flask import (
     app as blog_app,
