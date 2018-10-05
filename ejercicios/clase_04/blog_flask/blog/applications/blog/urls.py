@@ -14,3 +14,7 @@ def load_urls():
         "/create/",
         view_func=views.Create.as_view(conf.BLOG_CREATE_URL_NAME)
     )
+    bp.add_url_rule(
+        "/<int:post_id>/",
+        view_func=views.Detail.as_view(conf.BLOG_DETAIL_URL_NAME)
+    )

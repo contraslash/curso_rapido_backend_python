@@ -45,3 +45,12 @@ class Create(View):
                     )
                 )
         return render_template('create.html')
+
+
+class Detail(View):
+    def dispatch_request(self, post_id):
+        context = dict()
+        context["post"] = models.Post.query.filter_by(id=post_id).first_or_404()
+        print(context)
+
+        return render_template('detail.html', **context)
