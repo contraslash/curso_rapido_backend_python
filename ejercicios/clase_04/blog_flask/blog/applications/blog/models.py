@@ -1,10 +1,6 @@
-"""
-This code was taked form [flask SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.3/quickstart/)
-"""
-
 from datetime import datetime
 
-from .database import db
+from blog.database import db
 
 class Post(db.Model):
     id = db.Column(
