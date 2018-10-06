@@ -20,5 +20,15 @@ urlpatterns = [
         "<int:post_id>/",
         views.Detail.as_view(),
         name=conf.BLOG_DETAIL_URL_NAME
+    ),
+    path(
+        "<int:post_id>/update",
+        views.Update.as_view(),
+        name=conf.BLOG_UPDATE_URL_NAME
+    ),
+    path(
+        "<int:post_id>/delete",
+        views.Delete.as_view(),
+        name=conf.BLOG_DELETE_URL_NAME
     )
 ]

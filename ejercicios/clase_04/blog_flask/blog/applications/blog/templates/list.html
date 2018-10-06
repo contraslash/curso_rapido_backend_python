@@ -5,10 +5,24 @@
 {% endblock %}
 
 {% block content %}
+    Mi nombre es {{ name }} y mi apellido es {{ last_name }}
+    <ul>
+
+    {% for elemento in lista %}
+            <li style="color: red">
+
+                {{ elemento }}
+                <hr>
+            </li>
+    {% endfor %}
+    </ul>
+    <div id="saludo">
+
+    </div>
     {% for post in posts %}
     <article class="post">
       <header>
-        <div>
+        <div >
           <h1>
               <a href="{{ url_for('blog.blog_detail', post_id=post.id) }}">
                   {{ post['title'] }}
@@ -24,5 +38,6 @@
     {% endif %}
  {% endfor %}
 <a href="{{ url_for('blog.blog_create') }}">Create</a>
+
 
 {% endblock %}
