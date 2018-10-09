@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>
+                {% trans 'List of' %} {{ model_name_plural }} {{ saludo }}
+            </h1>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>
+                            {{ model_name_plural }}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for element in list %}
+                        <tr>
+                            <td>
+                                <a href="{{ element.id }}">{{ element.task }}</a> <a href="{{ element.id }}/delete">X</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>
+                                {% trans 'There are no tasks' %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="actions">
+                    <a href="create">
+
+                        <button class="btn btn-success">
+                            {% trans 'Create' %}
+                        </button>
+                    </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

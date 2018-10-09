@@ -21,27 +21,71 @@
 <textarea id="source">
     ![]()
 ---
-class: center, middle, light
-# Ejercicios
+class: center, middle
+# Flask Cheat Sheet
 ## Mauricio Collazos
 ---
-# Lista de Tareas
-- Crear un ambiente
-- Decidir el framework [Flask/Django]
-- Instalar Dependencias [Flask-SQLAlchemy]
-- Crear el proyecto
-- Aclara los casos de uso
-- Crear la aplicación
-- Definir el modelo de datos
-- Migrar el modelo de datos
-- Crear las URLs
-- Crear las vistas
-- Crear las plantillas
-- Realizar pruebas
-- Desplegar
+
+**Instalar Django**
+
+Conda
+```bash
+conda install -c flask
+```
+
+Virtualenv
+```bash
+pip install flask
+```
+**Crear un Proyecto**
+ 
+```bash
+mkdir [carpeta_del_proyecto]
+cd [carpeta_del_proyecto]
+mkdir [modulo_del_proyecto]
+cd [modulo_del_proyecto]
+# x-nix 
+touch __init__.py
+touch app.py
+# windows
+type null > __init__.py
+type null > app.py
+```
 ---
-class: center, middle, light
-# Encuesta
+
+**Crear una Applicación**
+
+```bash
+cd [carpeta_del_proyecto]
+cd [modulo_del_proyecto]
+mkdir [nombre_de_la_aplicación]
+cd nombre_de_la_applicación
+# x-nix 
+touch __init__.py
+touch models.py
+touch views.py
+
+# windows
+type null > __init__.py
+type null > models.py
+type null > views.py
+
+```
+
+**Ejecutar el servidor**
+
+```bash
+cd carpeta_del_proyecto
+# x-nix 
+FLASK_RUN_PORT=8000 FLASK_DEBUG=1 FLASK_APP=[modulo_del_proyecto] flask run
+# windows
+set FLASK_RUN_PORT=8000 
+set FLASK_DEBUG=1 
+set FLASK_APP=[modulo_del_proyecto]
+flask run
+```
+
+
 </textarea>
 <script src="/theme/js/remark.min.js"></script>
 <script>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{#{% load input_checker %}#}
+{% block content %}
+    <h1>{% trans 'Create' %} {{ model_name }}</h1>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <form method="POST" enctype="multipart/form-data" class="">
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    <div class="non-field-errors">
+                        {% for err in form.non_field_errors %}
+                            <p class="form-error">{{ err }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% for input in form %}
+                    <div class="row">
+                    {% if input.errors %}
+                        {{ input.errors }}
+                    {% endif %}
+                    </div>
+                    <div class="form-group">
+{#                        {%  if input|is_checkbox %}#}
+{#                            <div class="">#}
+{##}
+{#                                <label for="{{ input.auto_id }}">#}
+{#                                    {{ input }}#}
+{#                                    {{ input.label }}#}
+{#                                </label>#}
+{#                            </div>#}
+{#                        {% elif input|is_select%}#}
+{#                            <label>{{ input.label }}</label>#}
+{#                            {{ input }}#}
+{#                        {% elif input|is_file%}#}
+{#                                <label>{{ input.label }}</label>#}
+{#                                {{ input }}#}
+{#                        {% elif input|is_text_area%}#}
+{#                                <label for="{{ input.name }}">{{ input.label }}</label><br>#}
+{#                                {{ input }}#}
+{#                        {% else %}#}
+{##}
+{#                                <label for="{{ input.name }}">{{ input.label }}</label>#}
+{#                                {{ input }}#}
+{#                        {% endif %}#}
+                    {{ form.as_p }}
+                        </div>
+
+                {% endfor %}
+                <div class="actions">
+
+                    <a href="javascript:window.history.back();">
+                        <div class="btn btn-default">
+                                Back
+                        </div>
+                    </a>
+                    <button type="submit" class="btn btn-success">
+                        {% trans 'create' %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
