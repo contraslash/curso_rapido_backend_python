@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/theme/css/custom_page.css" />
+
+
+
+
+    <title>
+
+        Estructura Proyecto Flask
+        </title>
+</head>
+<body class="white">
+
+    <div class="container">
+
+<section id="content" class="body">
+    <h1 class="entry-title">
+        Estructura Proyecto Flask
+    </h1>
+    
+    
+    <h2>
+        Estructura del proyecto
+    </h2>
+    <pre>
+        <code>
+├── README.md
+└── [carpeta_del_proyecto]
+    ├── __init__.py
+    ├── app.py (<- Aquí se lanza el proyecto por medio de la función create_app)
+    ├── applications
+    │   ├── __init__.py
+    │   └── [blue_print_1]
+    │   │   ├── __init__.py (<- Recordar en este archivo cargar los modelos y las urls)
+    │   │   ├── conf.py (<- Aquí toda la configuración del proyecto: nombres de URLS, mensajes, constantes, etc)
+    │   │   ├── models.py (<- Definición de los modelos)
+    │   │   ├── templates
+    │   │   │   ├── [plantilla_1].html
+    │   │   │   └── [plantilla_2].html
+    │   │   ├── urls.py (<- Aquí todas las urls)
+    │   │   └── views.py (<- Aquí las vistas)
+    │   └── [blue_print_2]
+    │       ├── __init__.py
+    │       ├── conf.py
+    │       ├── models.py
+    │       ├── templates
+    │       │   ├── [plantilla_1].html
+    │       │   └── [plantilla_2].html
+    │       ├── urls.py
+    │       ├── views (<- Si hay muchas vistas se recomienda reorganizar  las vistas en un paquete específico)
+    │       └─── __init__.py
+    │           ├── [vistas_modelo_1].py
+    │           └── [vistas_modelo_2].py
+    ├── config.py
+    ├── database.py
+    ├── db.sqlite3
+    ├── static
+    │   └── style.css
+    └── templates
+        └── base.html
+        </code>
+    </pre>
+     <h2>
+        __init__.py [proyecto]
+    </h2>
+<pre>
+    <code>
+from .app import create_app
+    </code>
+</pre>
+    <h2>
+        Archivo app.py
+    </h2>
+<pre>
+    <code>
+from flask import Flask
+
+from .database import db
+
+
+def create_app(test_config=None):
+    # create and configure the app
+    app = Flask(__name__)
+    app.config.from_mapping(
+        SECRET_KEY='dev'
+    )
+
+    if test_config is None:
+        # load the instance config, if it exists, when not testing
+        app.config.from_pyfile('config.py')
+    else:
+        # load the test config if passed in
+        app.config.from_mapping(test_config)
+    # Aquí cargue los blueprints
+    from .applications.[blueprint_1] import bp as [alias_del_blueprint]
+    app.register_blueprint([blueprint_1])
+    from .applications.[blueprint_2] import bp as [alias_del_blueprint]
+    app.register_blueprint([blueprint_2
+    print("Initializing DB")
+    db.init_app(app)
+    with app.test_request_context():
+        db.create_all()
+    print("DB Initialized successfully")
+
+    return app
+    </code>
+</pre>
+        <h2>
+        Archivo config.py
+    </h2>
+<pre>
+    <code>
+# Aquí cargue todas las constantes del proyecto
+# Statement for enabling the development environment
+DEBUG = True
+
+# Define the application directory
+import os
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+SQLALCHEMY_DATABASE_URI  = 'sqlite:///db.sqlite3'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+
+print("Loading configuration")
+    </code>
+</pre>
+     <h2>
+        Archivo config.py
+    </h2>
+<pre>
+    <code>
+# Simplemente se inicializa la base de datos
+from flask_sqlalchemy import SQLAlchemy
+
+# Este objeto db será llamado por todos los modelos de los blueprints
+db = SQLAlchemy()
+    </code>
+</pre>
+    <h2>
+        __init__.py [Blueprint]
+    </h2>
+<pre>
+    <code>
+import functools
+import os
+
+from flask.blueprints import Blueprint
+
+
+bp = Blueprint(
+    '[nombre_del_blupeprint]',
+    __name__,
+    url_prefix='/', # Prefijo de las urls
+    template_folder=os.path.join(
+        os.path.abspath(os.path.dirname(__file__)),
+        "templates"
+    )
+)
+
+# flask does not load our inner schema so we need to tell flask
+# to consider the schemas loading the urls and models
+
+# Manera de cargar las urls y los models
+from .urls import load_urls
+load_urls()
+from . import models
+    </code>
+</pre>
+    <h2>
+        models.py [blueprint]
+    </h2>
+    <pre>
+        <code>
+from datetime import datetime
+
+from [nombre_del_proyecto].database import db
+
+# Definición de los modelos
+class Post(db.Model):
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+    name = db.Column(
+        db.String(80),
+        nullable=False
+    )
+
+    def __str__(self):
+        return "{}".format(self.title)
+
+
+        </code>
+    </pre>
+    <h2>
+        urls.py
+    </h2>
+    <pre>
+        <code>
+from . import (
+    bp,
+    views,
+    conf
+)
+
+
+# Creamos esta función para poder cargarle al blueprint todas las urls, este método se llama en el __init__.py
+# del blueprint
+def load_urls():
+    bp.add_url_rule(
+        "/[ruta_url]/",
+        view_func=views.[clase_vista].as_view(conf.[cadena_nombre_lista])
+    )
+        </code>
+    </pre>
+    <h2>
+        views.py
+    </h2>
+    <pre>
+        <code>
+from flask.views import View
+from flask.templating import render_template
+from flask.helpers import url_for, request, flash
+from flask.globals import g
+from werkzeug.utils import redirect
+
+from . import (
+    conf,
+    models
+)
+
+
+class [Nombre Vista](View):
+    #  Defina que métodos va a recibir
+    methods = ["GET", "POST"]
+    # Todas las vistas deben implementar el método dispatch_request
+    def dispatch_request(self):
+        # Que debe retornar una vista renderizada
+        return render_template('[nombre_plantilla].html', **context)
+        </code>
+    </pre>
+    
+</section>
+    </div>
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+</body>
+</html>

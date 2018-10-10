@@ -1,6 +1,6 @@
 Author: Mauricio Collazos
 Title: Flask Cheat Sheet
-Date: 2018-10-08
+Date: 2018-10-10
 ---
 ![]()
 ---
@@ -67,4 +67,31 @@ set FLASK_DEBUG=1
 set FLASK_APP=[modulo_del_proyecto]
 flask run
 ```
-
+---
+**Estructura de un proyecto en flask**
+```bash
+├── README.md
+└── blog
+    ├── __init__.py
+    ├── app.py
+    ├── applications
+    │   ├── __init__.py
+    │   └── blog
+    │       ├── __init__.py
+    │       ├── conf.py
+    │       ├── models.py
+    │       ├── templates
+    │       │   ├── create.html
+    │       │   ├── detail.html
+    │       │   ├── list.html
+    │       │   └── update.html
+    │       ├── urls.py
+    │       └── views.py
+    ├── config.py
+    ├── database.py
+    ├── db.sqlite3
+    ├── static
+    │   └── style.css
+    └── templates
+        └── base.html
+```
