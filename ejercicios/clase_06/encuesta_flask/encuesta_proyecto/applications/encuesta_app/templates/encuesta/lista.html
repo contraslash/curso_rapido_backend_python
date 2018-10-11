@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>Posts</h1>
+{% endblock %}
+
+{% block content %}
+
+
+    </div>
+    {% for encuesta in encuestas %}
+    <article class="post">
+      <header>
+        <div >
+          <h1>
+              <a href="{{ url_for(detalle_encuesta, encuesta_id=encuesta.id) }}">
+                  {{ encuesta.name }}
+              </a>
+          </h1>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+ {% endfor %}
+<a href="{{ url_for(crear_encuesta) }}">Create</a>
+
+
+{% endblock %}

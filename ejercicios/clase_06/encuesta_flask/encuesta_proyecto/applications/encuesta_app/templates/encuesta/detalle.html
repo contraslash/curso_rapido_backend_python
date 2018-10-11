@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>Post</h1>
+{% endblock %}
+
+{% block content %}
+
+    <article class="post">
+      <header>
+        <div>
+          <h1>{{ encuesta.name}}</h1>
+          <h2>{{encuesta.last_name}}</h2>
+        </div>
+      </header>
+    </article>
+    <a href="{{ url_for(actualizar_encuesta, encuesta_id=encuesta.id) }}">Update</a>
+    <a href="{{ url_for(eliminar_encuesta, encuesta_id=encuesta.id) }}">Delete</a>
+
+
+{% endblock %}
