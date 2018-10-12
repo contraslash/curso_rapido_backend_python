@@ -41,6 +41,16 @@ class: center, middle, light
 - Que los nombres sean explicatorios
 - Documente TODO
 ---
+# No todo CRUD es RESTful
+- Negociación de contenido
+- HATEOAS (Hypermedia As The Engiene of Application State)
+- Seguridad
+- Versionamiento
+---
+# Representaciones
+- Un recurso puede tener diferentes representaciones
+- Cada representación debe tener suficiente información para modificar el objeto
+---
 # Librerías
 
 - [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)
