@@ -43,6 +43,7 @@
     │   │   ├── __init__.py (<- Recordar en este archivo cargar los modelos y las urls)
     │   │   ├── conf.py (<- Aquí toda la configuración del proyecto: nombres de URLS, mensajes, constantes, etc)
     │   │   ├── models.py (<- Definición de los modelos)
+    │   │   ├── forms.py (<- Definición de los formularios)
     │   │   ├── templates
     │   │   │   ├── [plantilla_1].html
     │   │   │   └── [plantilla_2].html
@@ -67,6 +68,28 @@
     │   └── style.css
     └── templates
         └── base.html
+        </code>
+    </pre>
+    <h2>
+        README.md
+    </h2>
+    <pre>
+        <code>
+
+# [nombre del proyecto]
+Para ejecutar la aplicación
+```bash
+FLASK_RUN_PORT=8000 FLASK_DEBUG=1 FLASK_APP=[nombre_del_proyecto] flask run
+```
+
+Para usuarios windows
+```bash
+set FLASK_RUN_PORT=8000
+set FLASK_DEBUG=1
+set FLASK_APP=[nombre_del_proyecto]
+flask run
+```
+
         </code>
     </pre>
      <h2>
@@ -134,7 +157,7 @@ print("Loading configuration")
     </code>
 </pre>
      <h2>
-        Archivo config.py
+        Archivo database.py
     </h2>
 <pre>
     <code>
@@ -146,6 +169,10 @@ db = SQLAlchemy()
     </code>
 </pre>
     <h2>
+        templates/base.html
+    </h2>
+    <a href="block-title-base-endblock.html">Archivo html</a>
+    <h2>
         __init__.py [Blueprint]
     </h2>
 <pre>
@@ -155,9 +182,10 @@ import os
 
 from flask.blueprints import Blueprint
 
+from . import conf
 
 bp = Blueprint(
-    '[nombre_del_blupeprint]',
+    conf.BLUEPRINT_NAME,
     __name__,
     url_prefix='/', # Prefijo de las urls
     template_folder=os.path.join(
@@ -175,6 +203,23 @@ load_urls()
 from . import models
     </code>
 </pre>
+    <h2>
+        conf.py [blueprint]
+    </h2>
+    <pre>
+        <code>
+BLUEPRINT_NAME = "[blueprint_name]"
+
+[VIEW]_LIST_URL_NAME = "[view]_list"
+[VIEW]_CREATE_URL_NAME = "[view]_create"
+[VIEW]_DETAIL_URL_NAME = "[view]_detail"
+[VIEW]_UPDATE_URL_NAME = "[view]_update"
+[VIEW]_DELETE_URL_NAME = "[view]_delete"
+
+def get_prefixed_url(url):
+    return "{}.{}".format(BLUEPRINT_NAME, url)
+        </code>
+    </pre>
     <h2>
         models.py [blueprint]
     </h2>
@@ -244,6 +289,7 @@ class [Nombre Vista](View):
     methods = ["GET", "POST"]
     # Todas las vistas deben implementar el método dispatch_request
     def dispatch_request(self):
+        context = dict()
         # Que debe retornar una vista renderizada
         return render_template('[nombre_plantilla].html', **context)
         </code>
