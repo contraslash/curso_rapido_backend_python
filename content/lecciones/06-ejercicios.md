@@ -1,6 +1,6 @@
 Title: Ejercicios 2
 Author: Mauricio Collazos
-Date: 2018-10-08
+Date: 2018-10-10
 ![]()
 ---
 class: center, middle, light
