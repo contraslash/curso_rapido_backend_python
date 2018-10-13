@@ -18,5 +18,6 @@ post_parser.add_argument(
 post_fields = {
     "id": fields.Integer,
     "title": fields.String,
-    "body": fields.String
+    "body": fields.String,
+    "pub_date": fields.DateTime
 }

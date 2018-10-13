@@ -14,9 +14,13 @@ def hello():
 def status_code(status_code):
     return "Hello World", status_code
 
+@app.route("/status-code/<string:status_code>/")
+def status_code_2(status_code):
+    return "Hello World Cadema", status_code
+
 @app.route("/plain-response")
 def plain_response():
-    return Response("Hello World", status=200, headers=dict(), content_type="text/plain")
+    return Response("{'response': 'Hello World'}", status=200, headers=dict(), content_type="application/json")
 
 
 @app.route("/json-response")
