@@ -25,7 +25,10 @@ SECRET_KEY = 'o1z)-4bxm(u0a(#b5o=dixm9f2o&i5@^us7rp594vb0wvf#_uh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "ma0collazos.pythonanywhere.com",
+    "warm-oasis-29730.herokuapp.com"
+]
 
 
 # Application definition
@@ -122,3 +125,6 @@ STATIC_URL = '/static/'
 
 JWT_HS256_KEY = os.environ.get("AUTH_JWT_HS256_KEY", "some_random_key")
 JWT_VALIDITY_TIME = os.environ.get("AUTH_JWT_VALIDITY_TIME", 3600)
+
+# import django_heroku
+# django_heroku.settings(locals())

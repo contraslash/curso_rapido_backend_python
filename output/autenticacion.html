@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+          <link rel="stylesheet" href="/theme/css/remark_theme.css" />
+
+        <title>Curso Rápido de Python</title>
+        <meta charset="utf-8" />
+
+
+
+</head>
+
+<body id="index" class="home">
+        <!--<header id="banner" class="body">-->
+                <!--<h1><a href="/">Curso Rápido de Python <strong></strong></a></h1>-->
+        <!--</header>-->
+        <!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+
+<textarea id="source">
+    ![]()
+---
+Pendientes
+
+- [Almacenamiento S3](https://blog.contraslash.com/almacenar-archivos-en-s3-desde-django/)
+- [Migrar a MySQL](https://blog.contraslash.com/migrar-de-sqlite3-a-mysql-django/)
+
+---
+class: center, middle, light
+# Autenticación
+## Mauricio Collazos
+
+---
+# Objetivo
+Verificar la identidad de un usuario
+  
+---
+# Tipos
+- Basic
+- Bearer
+- Digest
+- HOBA
+- Mutual
+
+---
+# JWT
+- [Especificación](https://tools.ietf.org/html/rfc7519)
+- Header.Payload.Signature
+Header
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+Payload
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+```
+Signature
+
+---
+# Librerías
+- [JWTCrypto](https://github.com/latchset/jwcrypto/)
+- [Python-Jose](https://github.com/mpdavis/python-jose/)
+- [PyJWT](https://github.com/jpadilla/pyjwt/)
+- [AuthLib](https://github.com/lepture/authlib)
+</textarea>
+<script src="/theme/js/remark.min.js"></script>
+<script>
+    var slideshow = remark.create();
+</script>
+
+                    <li><a href="/pages/block-title-base-endblock.html">{% block title %}base{% endblock %}</a></li>
+                    <li><a href="/pages/bases-de-datos-con-docker.html">
+        Bases de Datos con Docker
+    </a></li>
+                    <li><a href="/pages/estructura-proyecto-flask.html">
+        Estructura Proyecto Flask
+    </a></li>
+                    <li><a href="/pages/introduccion-a-python.html">
+        Introducción a python
+    </a></li>
+                    <li><a href="/pages/sintaxis.html">
+        Sintaxis
+    </a></li>
+                    <li><a href="/pages/tipo-none.html">
+        Tipo None
+    </a></li>
+                    <li><a href="/pages/tipos-numericos.html">
+        Tipos Numéricos
+    </a></li>
+                    <li><a href="/pages/tipo-secuenciales.html">
+        Tipo Secuenciales
+    </a></li>
+                    <li><a href="/pages/tipos-y-objetos.html">
+        Tipos y Objetos
+    </a></li>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
