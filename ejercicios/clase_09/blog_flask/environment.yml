@@ -1,0 +1,39 @@
+name: blog_flask
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - aniso8601=3.0.2=py_1
+  - ca-certificates=2018.10.15=ha4d7672_0
+  - certifi=2018.10.15=py37_1000
+  - click=7.0=py_0
+  - flask=1.0.2=py_2
+  - flask-restful=0.3.6=py_1
+  - flask-sqlalchemy=2.3.2=py_0
+  - gunicorn=19.9.0=py37_1000
+  - itsdangerous=0.24=py_2
+  - jinja2=2.10=py_1
+  - markupsafe=1.0=py37h470a237_1
+  - openssl=1.0.2p=h470a237_1
+  - pycrypto=2.6.1=py37h470a237_2
+  - python-dateutil=2.7.3=py_0
+  - pytz=2018.5=py_0
+  - six=1.11.0=py37_1001
+  - sqlalchemy=1.2.12=py37h470a237_0
+  - werkzeug=0.14.1=py_0
+  - libedit=3.1.20170329=h6b74fdf_2
+  - libffi=3.2.1=hd88cf55_4
+  - libgcc-ng=8.2.0=hdf63c60_1
+  - libstdcxx-ng=8.2.0=hdf63c60_1
+  - ncurses=6.1=hf484d3e_0
+  - pip=10.0.1=py37_0
+  - python=3.7.0=h6e4f718_3
+  - readline=7.0=h7b6447c_5
+  - setuptools=40.4.3=py37_0
+  - sqlite=3.25.2=h7b6447c_0
+  - tk=8.6.8=hbc83047_0
+  - wheel=0.32.2=py37_0
+  - xz=5.2.4=h14c3975_4
+  - zlib=1.2.11=ha838bed_2
+prefix: /home/ma0/miniconda3/envs/blog_flask
+
