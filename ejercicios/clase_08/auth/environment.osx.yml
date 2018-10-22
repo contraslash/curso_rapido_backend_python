@@ -1,0 +1,35 @@
+name: devhack_python_2018_i_auth
+channels:
+  - defaults
+  - conda-forge
+  - anaconda
+dependencies:
+  - asn1crypto=0.24.0=py37_1003
+  - ca-certificates=2018.10.15=ha4d7672_0
+  - certifi=2018.10.15=py37_1000
+  - cffi=1.11.5=py37h5e8e0c9_1
+  - cryptography=2.3.1=py37hdffb7b8_0
+  - django=2.1.2=py37_1000
+  - djangorestframework=3.8.2=py_0
+  - idna=2.7=py37_1002
+  - openssl=1.0.2p=h470a237_1
+  - pycparser=2.19=py_0
+  - pyjwt=1.6.4=py_0
+  - pytz=2018.5=py_0
+  - six=1.11.0=py37_1001
+  - libcxx=4.0.1=h579ed51_0
+  - libcxxabi=4.0.1=hebd6815_0
+  - libedit=3.1.20170329=hb402a30_2
+  - libffi=3.2.1=h475c297_4
+  - ncurses=6.1=h0a44026_0
+  - pip=10.0.1=py37_0
+  - python=3.7.0=hc167b69_0
+  - readline=7.0=h1de35cc_5
+  - setuptools=40.4.3=py37_0
+  - sqlite=3.25.2=ha441bb4_0
+  - tk=8.6.8=ha441bb4_0
+  - wheel=0.32.1=py37_0
+  - xz=5.2.4=h1de35cc_4
+  - zlib=1.2.11=hf3cbc9b_2
+prefix: /Users/ma0/miniconda3/envs/devhack_python_2018_i_auth
+
