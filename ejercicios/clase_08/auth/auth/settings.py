@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "ma0collazos.pythonanywhere.com",
-    "warm-oasis-29730.herokuapp.com"
+    "warm-oasis-29730.herokuapp.com",
+    "localhost"
 ]
 
 

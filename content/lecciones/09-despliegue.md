@@ -9,10 +9,11 @@ class: center, middle, light
 
 ---
 # Modelos de servicio
--IaaS
--PaaS
--SaaS (???)
--FaaS
+
+- IaaS
+- PaaS
+- SaaS (???)
+- FaaS
   
 ---
 # IaaS
@@ -49,8 +50,8 @@ from blog_project import create_app
 
 app = create_app()
 ```
-gunicorn wsgi:app
-``
+
+`gunicorn wsgi:app`
 
 Django
 
