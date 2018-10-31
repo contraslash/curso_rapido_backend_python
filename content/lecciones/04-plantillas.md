@@ -3,9 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-10-05
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Plantillas
 ## Mauricio Collazos
+.footnote[]
 ---
 # Plantillas
 - string.Template

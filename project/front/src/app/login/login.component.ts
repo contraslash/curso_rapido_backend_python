@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
-
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -27,8 +26,8 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required]
+            username: ['user2', Validators.required],
+            password: ['user2_password', Validators.required]
         });
 
         // reset login status
@@ -54,6 +53,9 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
+                  console.log(data);
+                  console.log(this.router);
+                  console.log(this.returnUrl);
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {

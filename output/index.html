@@ -16,7 +16,9 @@
         </ul></nav><!-- /#menu -->
 <section id="content">
 <h2>All articles</h2>
-
+<h1>
+    Curso Python Devhack
+</h1>
 <ol id="post-list">
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="/despliegue.html" rel="bookmark" title="Permalink to Despliegue">Despliegue</a></h2> </header>
@@ -28,10 +30,10 @@
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Despliegue
 ## Mauricio Collazos
-
+.footnote[]
 ---
 # Modelos de servicio
 
@@ -53,7 +55,7 @@ Pet vs Cattle
 ---
 # PaaS
 - [Heroku](https://www.heroku.com/)
-- [Google App Engine](https … </div>-->
+- [Google App … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -65,17 +67,12 @@ Pet vs Cattle
                     </address>
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
----
-Pendientes
-
-- [Almacenamiento S3](https://blog.contraslash.com/almacenar-archivos-en-s3-desde-django/)
-- [Migrar a MySQL](https://blog.contraslash.com/migrar-de-sqlite3-a-mysql-django/)
 
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Autenticación
 ## Mauricio Collazos
-
+.footnote[]
 ---
 # Objetivo
 Verificar la identidad de un usuario
@@ -95,7 +92,22 @@ Verificar la identidad de un usuario
 Header
 ```json
 {
-  "alg … </div>-->
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+Payload
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+```
+Signature
+
+---
+# Librerías … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -108,10 +120,10 @@ Header
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # APIs
 ## Mauricio Collazos
-
+.footnote[]
 ---
 # HTTP
   - Recursos
@@ -132,8 +144,7 @@ class: center, middle, light
     - 405: Method Not Allowed
     - 500: Internal Server Error
     - 502: Bad Gateway
-    - 503: Service Unavailable
-    - 504: Gateway … </div>-->
+    - 503: Service Unavailable … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -146,10 +157,10 @@ class: center, middle, light
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Ejercicios 2
 ## Mauricio Collazos
-
+.footnote[]
 ---
 class: center, middle, light
 # Encuesta </div>-->
@@ -249,9 +260,10 @@ Este comando crea una carpeta con los … </div>-->
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Ejercicios
 ## Mauricio Collazos
+.footnote[]
 ---
 # Lista de Tareas
 - Crear un ambiente
@@ -263,8 +275,7 @@ class: center, middle, light
 - Definir el modelo de datos
 - Migrar el modelo de datos
 - Crear las URLs
-- Crear las vistas
-- Crear las … </div>-->
+- Crear las vistas … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -367,9 +378,10 @@ source carpeta_del_ambiente/bin/activate … </div>-->
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Plantillas
 ## Mauricio Collazos
+.footnote[]
 ---
 # Plantillas
 - string.Template
@@ -405,9 +417,10 @@ class: center, middle, light
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Bases de Datos
 ## Mauricio Collazos
+.footnote[]
 ---
 # Tipos de bases de datos
 - SQL
@@ -425,9 +438,7 @@ Standard Query Language:
 # Bases de datos SQL
 - MySQL
 - PostgreSQL
-- MsSQL
-- MariaDB
-- Oracle … </div>-->
+- MsSQL … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -440,9 +451,10 @@ Standard Query Language:
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Arquitectura
 ## Mauricio Collazos
+.footnote[]
 ---
 class: center, middle, light
 # D R Y
@@ -457,8 +469,7 @@ class: center, middle, light
 # [12 Factor App](https://12factor.net/es/)
 ---
 # Estructura de proyectos
-- Módulos
-- Estructura basada … </div>-->
+- Módulos … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -471,9 +482,10 @@ class: center, middle, light
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Tipos básicos 1
 ## Mauricio Collazos
+.footnote[]
 ---
 # Tipos en Python
 - None
@@ -501,9 +513,7 @@ class: center, middle, light
 - Operadores matemáticos
 - Operadores lógicos
 - Funciones integradas
-- Operadores de secuencias y mapas
----
-# Expresiones … </div>-->
+- Operadores de secuencias y … </div>-->
             <!-- /.entry-content -->
         </article></li>
         <li><article class="hentry">
@@ -516,13 +526,13 @@ class: center, middle, light
                 </footer><!-- /.post-info -->
                 <!--<div class="entry-content"> ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Introducción
 ## Mauricio Collazos
+.footnote[]
 ---
 class: center, middle
 # ¿Porqué Python?
-
 - Elegancia
 - Sencillez
 - Versatilidad
@@ -536,8 +546,7 @@ class: center
 https://www.economist.com/graphic-detail/2018/07/26/python-is-becoming-the-worlds-most-popular-coding-language
 ---
 class: center
-# Algunos enlaces útiles
-- [Encuestas de … </div>-->
+# Algunos enlaces útiles … </div>-->
             <!-- /.entry-content -->
         </article></li>
 </ol><!-- /#posts-list -->

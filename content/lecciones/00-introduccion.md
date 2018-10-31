@@ -3,13 +3,13 @@ Author: Mauricio Collazos
 Date: 2018-09-24
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Introducción
 ## Mauricio Collazos
+.footnote[]
 ---
 class: center, middle
 # ¿Porqué Python?
-
 - Elegancia
 - Sencillez
 - Versatilidad

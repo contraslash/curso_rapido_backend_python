@@ -3,9 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-10-08
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Ejercicios
 ## Mauricio Collazos
+.footnote[]
 ---
 # Lista de Tareas
 - Crear un ambiente

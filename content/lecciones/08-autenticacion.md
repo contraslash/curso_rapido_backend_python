@@ -2,17 +2,12 @@ Title: Autenticación
 Author: Mauricio Collazos
 Date: 2018-10-17
 ![]()
----
-Pendientes
-
-- [Almacenamiento S3](https://blog.contraslash.com/almacenar-archivos-en-s3-desde-django/)
-- [Migrar a MySQL](https://blog.contraslash.com/migrar-de-sqlite3-a-mysql-django/)
 
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Autenticación
 ## Mauricio Collazos
-
+.footnote[]
 ---
 # Objetivo
 Verificar la identidad de un usuario

@@ -3,9 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-10-01
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Arquitectura
 ## Mauricio Collazos
+.footnote[]
 ---
 class: center, middle, light
 # D R Y

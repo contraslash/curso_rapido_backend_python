@@ -3,9 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-10-03
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Bases de Datos
 ## Mauricio Collazos
+.footnote[]
 ---
 # Tipos de bases de datos
 - SQL

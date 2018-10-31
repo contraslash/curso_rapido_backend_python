@@ -3,9 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-09-26
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Tipos básicos 1
 ## Mauricio Collazos
+.footnote[]
 ---
 # Tipos en Python
 - None

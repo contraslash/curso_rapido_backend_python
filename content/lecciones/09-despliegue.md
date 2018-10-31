@@ -3,10 +3,10 @@ Author: Mauricio Collazos
 Date: 2018-10-19
 ![]()
 ---
-class: center, middle, light
+class: center, middle, light, first-slide
 # Despliegue
 ## Mauricio Collazos
-
+.footnote[]
 ---
 # Modelos de servicio
 
