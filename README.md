@@ -1,4 +1,14 @@
-# Curso Rápido de Python
+# Curso de backend con Python
+
+Curso rápido de aplicaciones web con [Python](https://python.org) para [Devhack](https://www.devhack.co/).
+
+En este repositorio encontrará:
+
+- [content](content): Todo el contenido del curso: presentaciones y artículos
+- [ejercicios](ejercicios): Código en Python correspondiente a cada clase
+- [output](output): Una versión compilada de la página del curso
+- [project](project): Referencias a repositorios con código de los proyectos realizados en este curso
+- [themes](themes): Tema de Pelican para construir el sitio estático
 
 Este sitio fue construido usando [Pelican](https://blog.getpelican.com/)
 

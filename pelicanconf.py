@@ -52,4 +52,6 @@ READERS = {
 STATIC_PATHS = ["img"]
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
+ARTICLE_ORDER_BY = "date"
+PAGE_ORDER_BY = "date"
 # THEME_STATIC_PATHS = ["themes/remark/static"]
