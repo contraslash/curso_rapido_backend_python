@@ -69,3 +69,16 @@ Virtualenv
 ```bash
 pip install -r requirements.txt
 ```
+
+
+**Instalar paquete**
+
+Conda
+```bash
+conda install [nombre_paquete]
+```
+
+Virtualenv
+```bash
+pip install [nombre_paquete]
+```

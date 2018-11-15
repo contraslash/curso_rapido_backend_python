@@ -1,5 +1,46 @@
 # Blog flask
 
+Instalar las dependencias
+
+```bash
+conda install flask-sqlalchemy
+```
+
+Crear un archivo que maneje una única instancia de la base de datos
+```python
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+```
+
+Crear un archivo de modelos *models.py*
+```python
+from datetime import datetime
+
+from .database import db
+
+class Post(db.Model):
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+    title = db.Column(
+        db.String(80),
+        nullable=False
+    )
+    body = db.Column(
+        db.Text,
+        nullable=False
+    )
+    pub_date = db.Column(
+        db.DateTime,
+        nullable=False,
+        default=datetime.utcnow
+    )
+
+    def __str__(self):
+        return "{}".format(self.title)
+```
 
 La aplicación debe ejecutarse desde la carpeta padre del proyecto
 Para ejecutar la aplicación

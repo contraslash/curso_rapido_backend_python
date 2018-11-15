@@ -13,7 +13,7 @@ class: center, middle, light, first-slide
 - No SQL
 ---
 # SQL
-Standard Query Language:
+Structured Query Language:
 
 - Manejo estandarizado de algebra relacional
 - Definición de estructura de datos

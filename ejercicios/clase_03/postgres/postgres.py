@@ -8,9 +8,9 @@ cursor.execute(
     """
         CREATE TABLE IF NOT EXISTS post(
         id serial PRIMARY KEY , 
-        title text, 
+        title VARCHAR(80), 
         body text, 
-        pub_date text
+        pub_date TIMESTAMP 
         )
     """
 )
