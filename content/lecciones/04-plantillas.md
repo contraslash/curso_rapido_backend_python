@@ -21,7 +21,7 @@ class: center, middle, light, first-slide
 # Operaciones sobre datos
 - Operaciones Condicionales
 - Operaciones Iterativas
---- 
+---
 # Extensibilidad
 - Herencia de plantillas
 - Filtros

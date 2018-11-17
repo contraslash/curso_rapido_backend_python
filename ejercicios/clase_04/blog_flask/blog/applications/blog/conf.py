@@ -1,4 +1,4 @@
-BLOG_PREFIX_URL = "blog_project"
+BLOG_PREFIX_URL = "blog"
 
 BLOG_LIST_URL_NAME = "blog_list"
 BLOG_CREATE_URL_NAME = "blog_create"

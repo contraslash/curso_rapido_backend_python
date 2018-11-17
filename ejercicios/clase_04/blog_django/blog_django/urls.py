@@ -24,10 +24,10 @@ urlpatterns = [
         '',
         include(
             (
-                "applications.blog_project.urls",
-                "blog_project"
+                "applications.blog.urls",
+                "blog"
             ),
-            namespace="blog_project"
+            namespace="blog"
         ),
 
     )

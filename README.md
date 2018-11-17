@@ -42,6 +42,13 @@ Para ejecutar local
 pelican --autoreload
 ```
 
+Y para verlo en el navegador
+
+```bash
+cd output
+python3 -m http.server 
+# Para salir cntrl + c
+```
 
 Para crear un nuevo tema
 

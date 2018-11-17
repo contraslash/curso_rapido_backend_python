@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    La cantidad de post es {{ posts|length }}
     {% for post in posts %}
     <article class="post">
       <header>

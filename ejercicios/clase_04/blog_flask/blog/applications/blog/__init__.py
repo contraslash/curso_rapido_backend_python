@@ -5,7 +5,7 @@ from flask.blueprints import Blueprint
 
 
 bp = Blueprint(
-    'blog_project',
+    'blog',
     __name__,
     url_prefix='/',
     template_folder=os.path.join(
