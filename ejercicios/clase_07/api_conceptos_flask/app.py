@@ -20,7 +20,12 @@ def status_code_2(status_code):
 
 @app.route("/plain-response")
 def plain_response():
-    return Response("{'response': 'Hello World'}", status=200, headers=dict(), content_type="application/json")
+    return Response(
+        "{'response': 'Hello World'}",
+        status=200,
+        headers=dict(),
+        content_type="test/plain"
+    )
 
 
 @app.route("/json-response")

@@ -17,7 +17,7 @@ class List(View):
         context["post_detail_url"] = conf.get_prefixed_url(conf.BLOG_DETAIL_URL_NAME)
         context["post_create_url"] = conf.get_prefixed_url(conf.BLOG_CREATE_URL_NAME)
         return render_template('list.html', **context)
-
+        # return models.Post.query.all()
 
 
 class Create(View):
