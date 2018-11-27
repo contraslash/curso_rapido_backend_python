@@ -9,7 +9,20 @@
         <nav>
           <h1><a href="{% url 'blog:blog_list' %}">My Blog</a></h1>
           <ul>
+                {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url "auth:log_out" %}">
+                            Log out
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url "auth:log_in" %}">
+                            Log In
+                        </a>
+                    </li>
 
+                {% endif %}
           </ul>
         </nav>
         <section class="content">

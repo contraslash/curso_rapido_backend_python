@@ -20,8 +20,10 @@ class List(View):
 
 class Create(LoginRequiredMixin, View):
     login_url = "/auth/log-in/"
+    raise_exception = True
 
     def get(self, request, *args, **kwargs):
+        print(request.user)
         return TemplateResponse(request, "create.html")
 
     def post(self, request, *args, **kwargs):

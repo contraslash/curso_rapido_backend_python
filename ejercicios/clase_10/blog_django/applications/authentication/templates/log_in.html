@@ -7,10 +7,23 @@
 {% block content %}
     <form method="post">
     {% csrf_token %}
-    <label for="username">Username</label>
-    <input name="username" id="username"  required>
-    <label for="password">Password</label>
-    <input name="password" id="password" type="password" required>
+{#    <label for="username">Username</label>#}
+{#    <input name="username" id="username"  required>#}
+{#    <label for="password">Password</label>#}
+{#    <input name="password" id="password" type="password" required>#}
+        {% for input in form %}
+            {% if input.name == "first_name" %}
+                <label for="{{ input.name }}" style="color: red">
+                    {{ input.label }}
+                </label>
+            {% else %}
+                <label for="{{ input.name }}">
+                    {{ input.label }}
+                </label>
+            {% endif %}
+
+            {{ input }}
+        {% endfor %}
     <input type="submit" value="Login">
   </form>
 {% endblock %}
